@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <nav-bar/>
     <router-view/>
   </div>
 </template>
+
+<script>
+import Navbar from './components/Navbar.vue'
+window.HELP_IMPROVE_VIDEOJS = false;
+export default {
+  components: {
+    "nav-bar": Navbar,
+  }
+}
+</script>
 
 <style>
 #app {
